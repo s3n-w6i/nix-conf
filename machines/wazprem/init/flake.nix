@@ -17,7 +17,7 @@
           system = "x86_64-linux";
 
           modules = [
-            ../../../common/init/comin-module.nix
+            ../../../modules/init/comin-module.nix
           ];
 
           specialArgs = {

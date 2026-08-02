@@ -10,6 +10,7 @@ nixpkgs.lib.nixosSystem {
 
   modules = [
     ./configuration.nix
-    ./hardware-configuration.nix
+    ./disko.nix
+    ../../modules/comin.nix
   ];
 }
