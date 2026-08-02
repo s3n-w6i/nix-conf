@@ -9,6 +9,7 @@
     ../../modules/fail2ban.nix
     ../../modules/minimal.nix
     ../../modules/ssh.nix
+    ../../modules/timezone.nix
     ../../modules/nix/nix-command-flakes.nix
     ../../modules/nix/optimise-gc.nix
     ../../users/admin.nix
