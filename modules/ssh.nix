@@ -1,5 +1,3 @@
-{ user, ... }:
-
 {
   services.openssh = {
     enable = true;
@@ -9,7 +7,7 @@
       KbdInteractiveAuthentication = false;
       ChallengeResponseAuthentication = false;
       PermitEmptyPasswords = false;
-      AllowUsers = [ user ];
+      # AllowUsers is configured in the users configs
       PermitRootLogin = "no";
     };
   };
