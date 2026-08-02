@@ -28,6 +28,8 @@
 
   system.stateVersion = "26.05"; # never change this
 
+  networking.hostName = "wazprem";
+
   nix.settings.trusted-users = [
     "root"
   ];
