@@ -7,6 +7,7 @@
   imports = [
     ../../modules/docker.nix
     ../../modules/fail2ban.nix
+    ../../modules/minimal.nix
     ../../modules/ssh.nix
     ../../modules/nix/nix-command-flakes.nix
     ../../modules/nix/optimise-gc.nix
@@ -17,11 +18,6 @@
     efiSupport = true;
     efiInstallAsRemovable = true;
   };
-
-  # Less stuff
-  documentation.man.enable = false;
-  environment.defaultPackages = [];
-
 
   environment.systemPackages = map lib.lowPrio [
     pkgs.curl
