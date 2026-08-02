@@ -1,5 +1,6 @@
 {
   disko,
+  ...
 }:
 disko.nixosModules.disko {
   disko.devices = {

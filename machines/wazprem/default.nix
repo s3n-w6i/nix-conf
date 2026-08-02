@@ -1,11 +1,13 @@
 {
   nixpkgs,
+  comin,
+  disko,
 }:
 nixpkgs.lib.nixosSystem {
   system = "x86_64-linux";
 
   specialArgs = {
-    inherit nixpkgs;
+    inherit nixpkgs comin disko;
   };
 
   modules = [
