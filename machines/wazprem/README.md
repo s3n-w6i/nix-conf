@@ -11,3 +11,12 @@ sudo nix run 'github:nix-community/disko/latest#disko-install' -- --flake github
 If you run into no space left on device, remove the old data with `nix-collect-garbage --delete-old`, resize the temporary file system `sudo mount -o remount,size=10G,noatime /nix/.rw-store` and try again. See https://discourse.nixos.org/t/error-installing-with-disko-no-space-left/61124/2.
 
 After installation, check the status of comin using `sudo systemctl status comin.service` to make sure it is able to pull the repository. You likely have to generate a key with `ssh-keygen` and add it as a deploy key in GitHub.
+
+To make the server able to read from the NAS, create the required credentials file in `/run/secret/waznas-smb-credentials`:
+
+```
+username=myuser
+password=mypassword
+```
+
+Protect it: `sudo chmod 600 /etc/nixos/smb-credentials`.

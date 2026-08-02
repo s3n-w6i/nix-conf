@@ -5,6 +5,7 @@
 }:
 {
   imports = [
+    ./file-shares.nix
     ../../modules/docker.nix
     ../../modules/fail2ban.nix
     ../../modules/minimal.nix
