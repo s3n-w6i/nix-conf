@@ -1,4 +1,4 @@
-{ pkgs, user, ... }:
+{ pkgs, ... }:
 
 {
   # Runtime
@@ -18,7 +18,7 @@
 
   # Enable lingering for docker container running user, otherwise containers don't respond when not logged in
   systemd.tmpfiles.rules = [
-    "f /var/lib/systemd/linger/${user}"
+    "f /var/lib/systemd/linger/admin"
   ];
 
   # Allow binding ports 80 and 443 because we want to run traefik as a docker container
