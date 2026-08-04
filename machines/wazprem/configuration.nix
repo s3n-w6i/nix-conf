@@ -8,6 +8,7 @@
     ./file-shares.nix
     ../../modules/docker.nix
     ../../modules/fail2ban.nix
+    ../../modules/low-power.nix
     ../../modules/minimal.nix
     ../../modules/ssh.nix
     ../../modules/timezone.nix
