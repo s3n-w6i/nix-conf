@@ -8,7 +8,7 @@ nixpkgs.lib.nixosSystem {
   system = "x86_64-linux";
 
   specialArgs = {
-    inherit nixpkgs comin disko;
+    inherit nixpkgs agenix comin disko;
   };
 
   modules = [
