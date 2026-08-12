@@ -20,4 +20,6 @@
   ];
 
   services.openssh.settings.AllowUsers = [ "admin" ];
+
+  age.identityPaths = ["/home/admin/.ssh/id_ed25519"];
 }
