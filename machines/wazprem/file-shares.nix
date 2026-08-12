@@ -1,11 +1,20 @@
+{ config, ... }:
+
 {
+  # Load credentials into secrets file
+  age.secrets.waznasSmbCredentials = {
+    file = ../../secrets/wazprem/admin/waznas-smb-credentials.age;
+    owner = "admin";
+    group = "admin";
+  };
+
   # For the uploads folder
   fileSystems."/mnt/waznas/Multimedia-Uploads" = {
     device = "//192.168.2.111/Multimedia-Uploads";
     fsType = "cifs";
 
     options = [
-      "credentials=/run/secrets/waznas-smb-credentials"
+      "credentials=${config.age.secrets.waznasSmbCredentials.path}"
       "uid=1000"
       "gid=100"
       "file_mode=0644"
@@ -21,7 +30,7 @@
     fsType = "cifs";
 
     options = [
-      "credentials=/run/secrets/waznas-smb-credentials"
+      "credentials=${config.age.secrets.waznasSmbCredentials.path}"
       "uid=1000"
       "gid=100"
       "file_mode=0444"

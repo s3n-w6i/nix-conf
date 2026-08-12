@@ -1,5 +1,6 @@
 {
   nixpkgs,
+  agenix,
   comin,
   disko,
 }:
@@ -13,7 +14,8 @@ nixpkgs.lib.nixosSystem {
   modules = [
     ./configuration.nix
     ./hardware-configuration.nix
-    ./disko.nix
+    ../../modules/agenix.nix
     ../../modules/comin.nix
+    ./disko.nix
   ];
 }
