@@ -5,7 +5,7 @@
   age.secrets.waznasSmbCredentials = {
     file = ../../secrets/wazprem/admin/waznas-smb-credentials.age;
     owner = "admin";
-    group = "admin";
+    group = "users";
   };
 
   # For the uploads folder
