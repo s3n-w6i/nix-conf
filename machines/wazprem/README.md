@@ -16,7 +16,7 @@ If you run into no space left on device, remove the old data with `nix-collect-g
 
 After installation, check the status of comin using `sudo systemctl status comin.service` to make sure it is able to pull the repository. You likely have to generate a key with `ssh-keygen` and add it as a deploy key in GitHub.
 
-Use the same key for encrypting secrets via agenix by putting the public key in the `wazpremAdmin` variable in `secrets/secrets.nix`. Re-encrpyt the NAS access details by deleting the old file and running `agenix -e wazprem/admin/waznas-smb-credentials.age` to make wazprem able to read data from the NAS. The contents must have the following layout:
+Use the same key for encrypting secrets via agenix by putting the public key in the `wazpremAdmin` variable in `secrets/secrets.nix`. Re-encrpyt the NAS access details by deleting the old file and running `agenix -e secrets/wazprem/admin/waznas-smb-credentials.age` to make wazprem able to read data from the NAS. The contents must have the following layout:
 
 ```
 username=wazprem
